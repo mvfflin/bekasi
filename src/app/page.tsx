@@ -1,101 +1,170 @@
+"use client";
+
 import Image from "next/image";
+import Fullpage from "@fullpage/react-fullpage";
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    return (
+        <div style={{ backgroundColor: "white" }}>
+            <Fullpage
+                credits={{
+                    enabled: false,
+                    label: "",
+                    position: "right",
+                }}
+                navigation={true}
+                // sectionsColor={["white"]}
+                navigationTooltips={["Judul", "Sejarah"]}
+                render={({ state, fullpageApi }) => {
+                    return (
+                        <Fullpage.Wrapper>
+                            <div className="section background-1 font-helvetica">
+                                <div className="mx-auto w-full py-5 text-center bg-zinc-700 bg-opacity-90">
+                                    <h1 className="text-2xl mb-5 text-zinc-300">
+                                        Lebih jauh mengenal tentang
+                                    </h1>
+                                    <h1 className="text-8xl text-white font-bold leading-none tracking-tight">
+                                        <Typewriter
+                                            onInit={(tw) => {
+                                                tw.typeString(
+                                                    "Kota Bekasi"
+                                                ).start();
+                                            }}
+                                        />
+                                    </h1>
+                                    <button
+                                        className="button-outline text-xl mt-5 font-poppins"
+                                        onClick={() =>
+                                            fullpageApi.moveSectionDown()
+                                        }
+                                    >
+                                        Yuk cari tahu!
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="section">
+                                <div className="grid grid-2 grid-flow-col w-full h-screen">
+                                    <div className="bg-zinc-900 h-full w-full justify-center p-5 pr-14 md:pr-5 content-center">
+                                        <h1 className="text-5xl text-white font-helvetica font-bold">
+                                            Sejarah Kota Bekasi
+                                        </h1>
+                                        <hr className="my-5 border-white border-2" />
+                                        <h1 className="text-zinc-300 text-justify">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Mollitia, a amet labore repudiandae
+                                            asperiores maiores vitae consequatur
+                                            aspernatur temporibus dolore minus
+                                            officia praesentium illo ad ipsa
+                                            enim quasi at veritatis maxime
+                                            necessitatibus obcaecati
+                                            perspiciatis sunt. Fugit deserunt
+                                            officia, laudantium fugiat tenetur
+                                        </h1>
+                                    </div>
+                                    <div className="bg-orange-100 hidden md:flex">
+                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-3 h-full">
+                                            <div className="grid gap-4">
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="grid gap-4">
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="grid gap-4">
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="grid gap-4">
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <img
+                                                        className="h-auto max-w-full rounded-lg"
+                                                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Fullpage.Wrapper>
+                    );
+                }}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
