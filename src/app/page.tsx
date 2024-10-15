@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Fullpage from "@fullpage/react-fullpage";
@@ -13,7 +14,6 @@ export default function Home() {
                     position: "right",
                 }}
                 navigation={true}
-                // sectionsColor={["white"]}
                 navigationTooltips={["Judul", "Sejarah"]}
                 render={({ fullpageApi }) => {
                     return (
