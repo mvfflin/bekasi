@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import Fullpage from "@fullpage/react-fullpage";
 import Typewriter from "typewriter-effect";
 
@@ -16,7 +16,7 @@ export default function Home() {
                 navigation={true}
                 // sectionsColor={["white"]}
                 navigationTooltips={["Judul", "Sejarah"]}
-                render={({ state, fullpageApi }) => {
+                render={({ fullpageApi }) => {
                     return (
                         <Fullpage.Wrapper>
                             <div className="section background-1 font-helvetica">
