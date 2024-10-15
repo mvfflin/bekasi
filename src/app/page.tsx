@@ -1,6 +1,5 @@
 "use client";
 
-// import Image from "next/image";
 import Fullpage from "@fullpage/react-fullpage";
 import Typewriter from "typewriter-effect";
 
