@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import Image from "next/image";
 import Fullpage from "@fullpage/react-fullpage";
 import Typewriter from "typewriter-effect";
 
@@ -20,10 +20,9 @@ export default function Home() {
                     label: "",
                     position: "right",
                 }}
-                navigation={false}
-                // sectionsColor={["white"]}
+                navigation={true}
                 navigationTooltips={["Judul", "Sejarah"]}
-                render={({ state, fullpageApi }) => {
+                render={({ fullpageApi }) => {
                     return (
                         <Fullpage.Wrapper>
                             <div className="section background-1 font-helvetica">
