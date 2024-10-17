@@ -36,9 +36,23 @@ body {
     }
 }
 
+.section,
+.slide {
+    background-attachment: fixed;
+}
+
 .background-1 {
     background-image: linear-gradient(to top, black, lightgray),
         url(../images/bg1-upscale.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.bg-oldbekasi {
+    background-image: linear-gradient(to top, black, gray),
+        url(../images/old-bekasi.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
