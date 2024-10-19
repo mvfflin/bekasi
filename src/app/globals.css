@@ -111,3 +111,48 @@ body {
     background-size: cover;
     background-blend-mode: multiply;
 }
+
+.bg-sc4-sd1 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://www.blibli.com/friends-backend/wp-content/uploads/2023/10/B1000230-1-Taman-Kota-Bekasi-1024x538.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.bg-sc4-sd2 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://static.republika.co.id/uploads/images/inpicture_slide/landmark-taman-hutan-kota-patriot-bina-bangsa-kota_211216164234-228.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.bg-sc4-sd3 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://ik.imagekit.io/tvlk/xpe-asset/AyJ40ZAo1DOyPyKLZ9c3RGQHTP2oT4ZXW+QmPVVkFQiXFSv42UaHGzSmaSzQ8DO5QIbWPZuF+VkYVRk6gh-Vg4ECbfuQRQ4pHjWJ5Rmbtkk=/2001156495968/Venetian-Water-Carnaval-Tickets-38771325-4565-402a-9912-130aeb46f2de.jpeg?tr=q-60,c-at_max,w-1280,h-720&_src=imagekit);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.bg-sc4-sd4 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://cydem.co.id/uploads/images/2023/09/image_750x_64f727f5c1edd.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.bg-sc4-sd5 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://img-z.okeinfo.net/library/images/2018/10/31/vt2ntd8gv07feuucertg_13994.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}

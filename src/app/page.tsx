@@ -2,6 +2,7 @@
 "use client";
 
 import Fullpage from "@fullpage/react-fullpage";
+import Link from "next/link";
 import Typewriter from "typewriter-effect";
 
 export default function Home() {
@@ -20,7 +21,12 @@ export default function Home() {
                     label: "",
                 }}
                 navigation={true}
-                navigationTooltips={["Judul", "Sejarah"]}
+                navigationTooltips={[
+                    "Judul",
+                    "Sejarah",
+                    "Kearifan Lokal",
+                    "Tempat Wisata",
+                ]}
                 render={({ fullpageApi }) => {
                     return (
                         <Fullpage.Wrapper>
@@ -352,15 +358,248 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+                            <div className="section bg-zinc-800">
+                                <div className="slide bg-zinc-800 text-white px-5 py-10">
+                                    <h1 className="text-center text-5xl font-helvetica font-bold">
+                                        Tempat Wisata di Bekasi
+                                    </h1>
+                                    <h2 className="text-center font-medium text-2xl mt-5">
+                                        Meskipun Kota Bekasi sering kali
+                                        dikaitkan dengan area perkotaan yang
+                                        padat, ada banyak tempat rekreasi yang
+                                        menarik dan bervariasi untuk dikunjungi,
+                                        yuk kita lihat!
+                                    </h2>
+                                    <div className="w-full justify-center md:space-x-5 mt-5 space-y-5 md:space-y-0 inline-flex flex-wrap align-middle items-center pb-12">
+                                        <div
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 1)
+                                            }
+                                            className="bg-zinc-900 w-72 h-72 aspect-square cursor-pointer p-5 hover:scale-105 transition-all"
+                                        >
+                                            <img
+                                                className="h-full object-cover"
+                                                src="https://www.blibli.com/friends-backend/wp-content/uploads/2023/10/B1000230-1-Taman-Kota-Bekasi-1024x538.jpg"
+                                            />
+                                        </div>
+                                        <div
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 2)
+                                            }
+                                            className="bg-zinc-900 w-72 h-72 aspect-square cursor-pointer p-5 hover:scale-105 transition-all"
+                                        >
+                                            <img
+                                                className="h-full object-cover"
+                                                src="https://static.republika.co.id/uploads/images/inpicture_slide/landmark-taman-hutan-kota-patriot-bina-bangsa-kota_211216164234-228.jpg"
+                                            />
+                                        </div>
+                                        <div
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 3)
+                                            }
+                                            className="bg-zinc-900 w-72 h-72 aspect-square cursor-pointer p-5 hover:scale-105 transition-all"
+                                        >
+                                            <img
+                                                className="h-full object-cover"
+                                                src="https://ik.imagekit.io/tvlk/xpe-asset/AyJ40ZAo1DOyPyKLZ9c3RGQHTP2oT4ZXW+QmPVVkFQiXFSv42UaHGzSmaSzQ8DO5QIbWPZuF+VkYVRk6gh-Vg4ECbfuQRQ4pHjWJ5Rmbtkk=/2001156495968/Venetian-Water-Carnaval-Tickets-38771325-4565-402a-9912-130aeb46f2de.jpeg?tr=q-60,c-at_max,w-1280,h-720&_src=imagekit"
+                                            />
+                                        </div>
+                                        <div
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 4)
+                                            }
+                                            className="bg-zinc-900 w-72 h-72 aspect-square cursor-pointer p-5 hover:scale-105 transition-all"
+                                        >
+                                            <img
+                                                className="h-full object-cover"
+                                                src="https://cydem.co.id/uploads/images/2023/09/image_750x_64f727f5c1edd.jpg"
+                                            />
+                                        </div>
+                                        <div
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 5)
+                                            }
+                                            className="bg-zinc-900 w-72 h-72 aspect-square cursor-pointer p-5 hover:scale-105 transition-all"
+                                        >
+                                            <img
+                                                className="h-full object-cover"
+                                                src="https://img-z.okeinfo.net/library/images/2018/10/31/vt2ntd8gv07feuucertg_13994.jpg"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="slide bg-zinc-200 text-black px-10 bg-sc4-sd1">
+                                    <h1 className="text-center text-5xl font-helvetica font-bold">
+                                        Taman Kota Bekasi
+                                    </h1>
+                                    <h2 className="text-center font-medium text-2xl mt-5">
+                                        Taman ini adalah area hijau di tengah
+                                        kota, tempat warga bisa bersantai,
+                                        berolahraga, atau berjalan-jalan
+                                        menikmati alam. Sangat cocok untuk
+                                        aktivitas keluarga atau komunitas. Cocok
+                                        untuk healing dan menenangkan diri
+                                        dikelilingi oleh pohon pohon hijau
+                                        disekitar kita
+                                    </h2>
+                                    <div className="text-center my-5 space-x-5">
+                                        <button
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 0)
+                                            }
+                                            className="button-dark"
+                                        >
+                                            Kembali
+                                        </button>
+                                        <button
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 2)
+                                            }
+                                            className="button-dark"
+                                        >
+                                            Selanjutnya
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="slide bg-zinc-200 text-white px-10 bg-sc4-sd2">
+                                    <h1 className="text-center text-5xl font-helvetica font-bold">
+                                        Hutan Kota Bina Bangsa
+                                    </h1>
+                                    <h2 className="text-center font-medium text-2xl mt-5">
+                                        Taman dengan pepohonan rindang ini
+                                        menawarkan suasana sejuk dan asri di
+                                        tengah Kota Bekasi. Cocok untuk jogging,
+                                        bersepeda, atau sekadar menikmati udara
+                                        segar.
+                                    </h2>
+                                    <div className="text-center my-5 space-x-5">
+                                        <button
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 0)
+                                            }
+                                            className="button-dark"
+                                        >
+                                            Kembali
+                                        </button>
+                                        <button
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 3)
+                                            }
+                                            className="button-dark"
+                                        >
+                                            Selanjutnya
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="slide bg-zinc-300 text-black px-10 bg-sc4-sd3">
+                                    <h1 className="text-center text-5xl font-helvetica font-bold">
+                                        Venetian Water Carnaval
+                                    </h1>
+                                    <h2 className="text-center font-medium text-2xl mt-5">
+                                        Ini adalah taman air tematik yang cocok
+                                        untuk keluarga, dengan berbagai wahana
+                                        air menarik dan suasana yang dirancang
+                                        menyerupai kota Venesia, Italia.
+                                        Disinilah tempat bermain yang seru dan
+                                        asik untuk dimainkan bersama dengan
+                                        teman kita
+                                    </h2>
+                                    <div className="text-center my-5 space-x-5">
+                                        <button
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 0)
+                                            }
+                                            className="button-dark"
+                                        >
+                                            Kembali
+                                        </button>
+                                        <button
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 4)
+                                            }
+                                            className="button-dark"
+                                        >
+                                            Selanjutnya
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="slide bg-zinc-300 text-white px-10 bg-sc4-sd4">
+                                    <h1 className="text-center text-5xl font-helvetica font-bold">
+                                        Saung Ranggon
+                                    </h1>
+                                    <h2 className="text-center font-medium text-2xl mt-5">
+                                        Saung Ranggon merupakan rumah
+                                        tradisional Betawi yang dibangun pada
+                                        abad ke-16. Tempat ini menawarkan wisata
+                                        sejarah dan budaya, menggambarkan
+                                        kehidupan masyarakat Betawi di masa
+                                        lalu. Biasanya dipergunakan sebagai
+                                        tempat menyepi bagi orang yang datang
+                                        (tamu) untuk minta berkah atau karomah.
+                                    </h2>
+                                    <div className="text-center my-5 space-x-5">
+                                        <button
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 0)
+                                            }
+                                            className="button-dark"
+                                        >
+                                            Kembali
+                                        </button>
+                                        <button
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 5)
+                                            }
+                                            className="button-dark"
+                                        >
+                                            Selanjutnya
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="slide bg-zinc-300 text-black px-10 bg-sc4-sd5">
+                                    <h1 className="text-center text-5xl font-helvetica font-bold">
+                                        Situ Rawa Gede
+                                    </h1>
+                                    <h2 className="text-center font-medium text-2xl mt-5">
+                                        Situ Rawa Gede adalah danau alami yang
+                                        terletak di Kecamatan Rawalumbu, Kota
+                                        Bekasi. Danau ini dikenal sebagai tempat
+                                        rekreasi yang tenang, cocok untuk
+                                        bersantai dan menikmati suasana alam.
+                                        Selain menjadi destinasi untuk
+                                        memancing, Situ Rawa Gede juga berfungsi
+                                        sebagai kawasan resapan air yang penting
+                                        bagi lingkungan sekitarnya. Meskipun
+                                        terletak di tengah perkotaan, danau ini
+                                        menawarkan pemandangan yang asri,
+                                        menjadikannya tempat favorit bagi warga
+                                        lokal yang ingin melepas penat.
+                                    </h2>
+                                    <div className="text-center my-5 space-x-5">
+                                        <button
+                                            onClick={() =>
+                                                fullpageApi.moveTo(4, 0)
+                                            }
+                                            className="button-dark"
+                                        >
+                                            Kembali
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </Fullpage.Wrapper>
                     );
                 }}
             />
-            <footer className="fixed bottom-0 right-0 m-5 px-3 py-2 bg-blue-900 text-white z-50">
+            <Link
+                href={"https://github.com/mvfflin/bekasi"}
+                target="_blank"
+                className="cursor-pointer fixed bottom-0 right-0 m-5 px-3 py-2 bg-blue-900 text-white z-50"
+            >
                 <h1 className="font-poppins">
                     Created by Sigma 5 - SMAN 5 Kota Bekasi &copy; 2024
                 </h1>
-            </footer>
+            </Link>
         </div>
     );
 }
