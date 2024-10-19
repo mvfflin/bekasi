@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 
 export default function Home() {
     return (
-        <div style={{ backgroundColor: "white" }}>
+        <div>
             <Fullpage
                 controlArrows={false}
                 // controlArrowsHTML={[
@@ -18,7 +18,6 @@ export default function Home() {
                 credits={{
                     enabled: false,
                     label: "",
-                    position: "right",
                 }}
                 navigation={true}
                 navigationTooltips={["Judul", "Sejarah"]}
@@ -102,11 +101,11 @@ export default function Home() {
                                 <div className="slide bg-oldbekasi p-20 px-5">
                                     <h1 className="md:text-3xl text-xl text-white font-poppins leading-relaxed text-center">
                                         Sejarah Tahun 1949 Sampai Terbentuknya
-                                        Kota Bekasi Sejarah setelah tahun 1949
-                                        ditandai aksi unjuk rasa sekitar 40.000
-                                        rakyat Bekasi pada tanggal 17 Februari
-                                        1950 di alun-alun Bekasi. Hadir pada
-                                        acara terseut Bapak Mu{"'"}min sebagai
+                                        Kota Bekasi, setelah tahun 1949 ditandai
+                                        aksi unjuk rasa sekitar 40.000 rakyat
+                                        Bekasi pada tanggal 17 Februari 1950 di
+                                        alun-alun Bekasi. Hadir pada acara
+                                        tersebut Bapak Mu{"'"}min sebagai
                                         Resuden Militer Daerah V. Inti dari
                                         unjuk rasa tersebut adalah penyapaian
                                         pernyataan sikap sebagai berikut. Rakyat
@@ -357,6 +356,11 @@ export default function Home() {
                     );
                 }}
             />
+            <footer className="fixed bottom-0 right-0 m-5 px-3 py-2 bg-blue-900 text-white z-50">
+                <h1 className="font-poppins">
+                    Created by Sigma 5 - SMAN 5 Kota Bekasi &copy; 2024
+                </h1>
+            </footer>
         </div>
     );
 }
