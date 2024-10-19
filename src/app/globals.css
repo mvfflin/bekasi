@@ -62,3 +62,52 @@ body {
 .button-outline {
     @apply ring-2 ring-white hover:bg-white hover:text-black transition-all px-5 py-2;
 }
+
+.button-dark {
+    @apply hover:ring-2 hover:ring-blue-600 bg-zinc-950 text-white hover:bg-zinc-800 transition-all px-5 py-2 rounded-lg;
+}
+
+.bg-sc3-sd1 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://nnc-media.netralnews.com/IMG-Netral-News-User-31-CG3UI2J9OS.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.bg-sc3-sd2 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://indonesiakaya.com/wp-content/uploads/2020/10/tanjidor_ie_1200.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.bg-sc3-sd3 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://detakmedia.com/wp-content/uploads/2022/06/IMG-20220613-WA0047.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.bg-sc3-sd4 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://asset.kompas.com/crops/lXA0fCmYgMEvNErQ0W5eMPV84-k=/0x0:1000x667/750x500/data/photo/2020/06/16/5ee87e1a53b0a.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.bg-sc3-sd5 {
+    background-image: linear-gradient(to top, black, gray),
+        url(https://dinaskebudayaan.jakarta.go.id/content/uploads/OPK/Seni_Budaya/Pernikahan_Betawi.jpg?1697435452460);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
